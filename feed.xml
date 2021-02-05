@@ -3,12 +3,32 @@
     <title>pvtdrk</title>
     <link href="https://pvtdrk.github.io/pvtdrk/feed.xml" rel="self" />
     <link href="https://pvtdrk.github.io/pvtdrk" />
-    <updated>2021-02-05T09:48:54+00:00</updated>
+    <updated>2021-02-05T10:08:31+00:00</updated>
     <author>
         <name>pvtdrk</name>
     </author>
     <id>https://pvtdrk.github.io/pvtdrk</id>
 
+    <entry>
+        <title>ESXi 7 on USB guide</title>
+        <author>
+            <name>pvtdrk</name>
+        </author>
+        <link href="https://pvtdrk.github.io/pvtdrk/esxi-7-on-usb-guide.html"/>
+        <id>https://pvtdrk.github.io/pvtdrk/esxi-7-on-usb-guide.html</id>
+
+        <updated>2021-02-05T10:08:31+00:00</updated>
+            <summary>
+                <![CDATA[
+                    here is the guide with screenshots and notes etc
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>here is the guide with screenshots and notes etc</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Guides for things</title>
         <author>
@@ -17,7 +37,7 @@
         <link href="https://pvtdrk.github.io/pvtdrk/guides-for-things.html"/>
         <id>https://pvtdrk.github.io/pvtdrk/guides-for-things.html</id>
 
-        <updated>2021-02-05T09:48:54+00:00</updated>
+        <updated>2021-02-05T10:08:27+00:00</updated>
             <summary>
                 <![CDATA[
                     list of guides: ESXi on USB
@@ -27,7 +47,7 @@
             <![CDATA[
                 <p>list of guides:</p>
 <p> </p>
-<p>ESXi on USB</p>
+<p><a href="https://pvtdrk.github.io/pvtdrk/esxi-7-on-usb-guide.html">ESXi on USB</a></p>
             ]]>
         </content>
     </entry>
