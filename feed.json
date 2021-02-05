@@ -10,6 +10,20 @@
     },
     "items": [
         {
+            "id": "https://pvtdrk.github.io/pvtdrk/installing-pfsense-2.html",
+            "url": "https://pvtdrk.github.io/pvtdrk/installing-pfsense-2.html",
+            "title": "ESXi 7 on USB guide",
+            "summary": "notes on installing pfSense",
+            "content_html": "<p>notes on installing pfSense</p>",
+            "author": {
+                "name": "pvtdrk"
+            },
+            "tags": [
+            ],
+            "date_published": "2021-02-05T10:28:59+00:00",
+            "date_modified": "2021-02-05T10:29:26+00:00"
+        },
+        {
             "id": "https://pvtdrk.github.io/pvtdrk/installing-pfsense.html",
             "url": "https://pvtdrk.github.io/pvtdrk/installing-pfsense.html",
             "title": "Installing pfSense",
@@ -24,32 +38,18 @@
             "date_modified": "2021-02-05T10:20:50+00:00"
         },
         {
-            "id": "https://pvtdrk.github.io/pvtdrk/esxi-7-on-usb-guide.html",
-            "url": "https://pvtdrk.github.io/pvtdrk/esxi-7-on-usb-guide.html",
-            "title": "ESXi 7 on USB guide",
-            "summary": "here is the guide with screenshots and notes etc",
-            "content_html": "<p>here is the guide with screenshots and notes etc</p>",
-            "author": {
-                "name": "pvtdrk"
-            },
-            "tags": [
-            ],
-            "date_published": "2021-02-05T10:06:22+00:00",
-            "date_modified": "2021-02-05T10:08:31+00:00"
-        },
-        {
             "id": "https://pvtdrk.github.io/pvtdrk/guides-for-things.html",
             "url": "https://pvtdrk.github.io/pvtdrk/guides-for-things.html",
             "title": "Guides for things",
             "summary": "list of guides: ESXi on USB pfSense basic install guide",
-            "content_html": "<p>list of guides:</p>\n<p> </p>\n<p><a href=\"https://pvtdrk.github.io/pvtdrk/esxi-7-on-usb-guide.html\">ESXi on USB</a></p>\n<p><a href=\"https://pvtdrk.github.io/pvtdrk/installing-pfsense.html\">pfSense basic install guide</a></p>",
+            "content_html": "<p>list of guides:</p>\n<p> </p>\n<p><a href=\"https://pvtdrk.github.io/pvtdrk/installing-pfsense-2.html\">ESXi on USB</a></p>\n<p><a href=\"https://pvtdrk.github.io/pvtdrk/installing-pfsense.html\">pfSense basic install guide</a></p>",
             "author": {
                 "name": "pvtdrk"
             },
             "tags": [
             ],
             "date_published": "2021-02-05T09:48:54+00:00",
-            "date_modified": "2021-02-05T10:21:21+00:00"
+            "date_modified": "2021-02-05T10:29:57+00:00"
         }
     ]
 }

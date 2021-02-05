@@ -3,12 +3,32 @@
     <title>pvtdrk</title>
     <link href="https://pvtdrk.github.io/pvtdrk/feed.xml" rel="self" />
     <link href="https://pvtdrk.github.io/pvtdrk" />
-    <updated>2021-02-05T10:21:21+00:00</updated>
+    <updated>2021-02-05T10:29:57+00:00</updated>
     <author>
         <name>pvtdrk</name>
     </author>
     <id>https://pvtdrk.github.io/pvtdrk</id>
 
+    <entry>
+        <title>ESXi 7 on USB guide</title>
+        <author>
+            <name>pvtdrk</name>
+        </author>
+        <link href="https://pvtdrk.github.io/pvtdrk/installing-pfsense-2.html"/>
+        <id>https://pvtdrk.github.io/pvtdrk/installing-pfsense-2.html</id>
+
+        <updated>2021-02-05T10:29:26+00:00</updated>
+            <summary>
+                <![CDATA[
+                    notes on installing pfSense
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>notes on installing pfSense</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Installing pfSense</title>
         <author>
@@ -30,26 +50,6 @@
         </content>
     </entry>
     <entry>
-        <title>ESXi 7 on USB guide</title>
-        <author>
-            <name>pvtdrk</name>
-        </author>
-        <link href="https://pvtdrk.github.io/pvtdrk/esxi-7-on-usb-guide.html"/>
-        <id>https://pvtdrk.github.io/pvtdrk/esxi-7-on-usb-guide.html</id>
-
-        <updated>2021-02-05T10:08:31+00:00</updated>
-            <summary>
-                <![CDATA[
-                    here is the guide with screenshots and notes etc
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>here is the guide with screenshots and notes etc</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
         <title>Guides for things</title>
         <author>
             <name>pvtdrk</name>
@@ -57,7 +57,7 @@
         <link href="https://pvtdrk.github.io/pvtdrk/guides-for-things.html"/>
         <id>https://pvtdrk.github.io/pvtdrk/guides-for-things.html</id>
 
-        <updated>2021-02-05T10:21:21+00:00</updated>
+        <updated>2021-02-05T10:29:57+00:00</updated>
             <summary>
                 <![CDATA[
                     list of guides: ESXi on USB pfSense basic install guide
@@ -67,7 +67,7 @@
             <![CDATA[
                 <p>list of guides:</p>
 <p> </p>
-<p><a href="https://pvtdrk.github.io/pvtdrk/esxi-7-on-usb-guide.html">ESXi on USB</a></p>
+<p><a href="https://pvtdrk.github.io/pvtdrk/installing-pfsense-2.html">ESXi on USB</a></p>
 <p><a href="https://pvtdrk.github.io/pvtdrk/installing-pfsense.html">pfSense basic install guide</a></p>
             ]]>
         </content>
