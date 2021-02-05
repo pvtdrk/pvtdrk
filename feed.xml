@@ -3,12 +3,32 @@
     <title>pvtdrk</title>
     <link href="https://pvtdrk.github.io/pvtdrk/feed.xml" rel="self" />
     <link href="https://pvtdrk.github.io/pvtdrk" />
-    <updated>2021-02-05T10:29:57+00:00</updated>
+    <updated>2021-02-05T10:31:30+00:00</updated>
     <author>
         <name>pvtdrk</name>
     </author>
     <id>https://pvtdrk.github.io/pvtdrk</id>
 
+    <entry>
+        <title>Blog</title>
+        <author>
+            <name>pvtdrk</name>
+        </author>
+        <link href="https://pvtdrk.github.io/pvtdrk/blog.html"/>
+        <id>https://pvtdrk.github.io/pvtdrk/blog.html</id>
+
+        <updated>2021-02-05T10:31:30+00:00</updated>
+            <summary>
+                <![CDATA[
+                    List of blog things
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>List of blog things</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>ESXi 7 on USB guide</title>
         <author>
