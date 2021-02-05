@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="https://pvtdrk.github.io.pvtdrk/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://pvtdrk.github.io/pvtdrk/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <url>
-<loc>https://pvtdrk.github.io.pvtdrk/</loc>
+<loc>https://pvtdrk.github.io/pvtdrk/</loc>
 </url>
 <url>
-<loc>https://pvtdrk.github.io.pvtdrk/blog.html</loc>
+<loc>https://pvtdrk.github.io/pvtdrk/blog.html</loc>
 <lastmod>2021-02-05T10:31:30+00:00</lastmod>
 </url>
 <url>
-<loc>https://pvtdrk.github.io.pvtdrk/free-ish-ssl-certs.html</loc>
+<loc>https://pvtdrk.github.io/pvtdrk/free-ish-ssl-certs.html</loc>
 <lastmod>2021-02-05T13:24:25+00:00</lastmod>
 </url>
 <url>
-<loc>https://pvtdrk.github.io.pvtdrk/guides-for-things.html</loc>
+<loc>https://pvtdrk.github.io/pvtdrk/guides-for-things.html</loc>
 <lastmod>2021-02-05T16:19:53+00:00</lastmod>
 </url>
 <url>
-<loc>https://pvtdrk.github.io.pvtdrk/installing-pfsense-2.html</loc>
+<loc>https://pvtdrk.github.io/pvtdrk/installing-pfsense-2.html</loc>
 <lastmod>2021-02-05T13:00:36+00:00</lastmod>
 <image:image>
-<image:loc>https://pvtdrk.github.io.pvtdrk/media/posts/5/Screenshot-2021-01-31-at-13.55.52.png</image:loc>
+<image:loc>https://pvtdrk.github.io/pvtdrk/media/posts/5/Screenshot-2021-01-31-at-13.55.52.png</image:loc>
 <image:title><![CDATA[Rufus setting ]]></image:title>
 </image:image>
 </url>
 <url>
-<loc>https://pvtdrk.github.io.pvtdrk/running-your-homelab-behind-pfsense.html</loc>
+<loc>https://pvtdrk.github.io/pvtdrk/running-your-homelab-behind-pfsense.html</loc>
 <lastmod>2021-02-05T16:17:33+00:00</lastmod>
 </url>
 </urlset>
