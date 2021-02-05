@@ -9,5 +9,19 @@
         "name": "pvtdrk"
     },
     "items": [
+        {
+            "id": "https://pvtdrk.github.io/pvtdrk/guides-for-things.html",
+            "url": "https://pvtdrk.github.io/pvtdrk/guides-for-things.html",
+            "title": "Guides for things",
+            "summary": "list of guides: ESXi on USB",
+            "content_html": "<p>list of guides:</p>\n<p> </p>\n<p>ESXi on USB</p>",
+            "author": {
+                "name": "pvtdrk"
+            },
+            "tags": [
+            ],
+            "date_published": "2021-02-05T09:48:54+00:00",
+            "date_modified": "2021-02-05T09:48:54+00:00"
+        }
     ]
 }
