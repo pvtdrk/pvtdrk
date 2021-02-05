@@ -1,21 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>pvtdrk</title>
-    <link href="https://pvtdrk.github.io/pvtdrk/feed.xml" rel="self" />
-    <link href="https://pvtdrk.github.io/pvtdrk" />
-    <updated>2021-02-05T13:24:52+00:00</updated>
+    <title>test</title>
+    <link href="https://pvtdrk.github.io.pvtdrk/feed.xml" rel="self" />
+    <link href="https://pvtdrk.github.io.pvtdrk" />
+    <updated>2021-02-05T16:19:53+00:00</updated>
     <author>
         <name>pvtdrk</name>
     </author>
-    <id>https://pvtdrk.github.io/pvtdrk</id>
+    <id>https://pvtdrk.github.io.pvtdrk</id>
 
+    <entry>
+        <title>Running your Homelab behind pfSense</title>
+        <author>
+            <name>pvtdrk</name>
+        </author>
+        <link href="https://pvtdrk.github.io.pvtdrk/running-your-homelab-behind-pfsense.html"/>
+        <id>https://pvtdrk.github.io.pvtdrk/running-your-homelab-behind-pfsense.html</id>
+
+        <updated>2021-02-05T16:17:33+00:00</updated>
+            <summary>
+                <![CDATA[
+                     The Homelab is up and running but you have a single IP and want to run all the things, this might help.&nbsp; Leveraging HAProxy on pfSense we can drive traffic to specified servers with the single external IP and all SSL is handled by&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                
+  <p>
+    The Homelab is up and running but you have a single IP and want to run all the things, this might help.&nbsp;<br><br>Leveraging HAProxy on pfSense we can drive traffic to specified servers with the single external IP and all SSL is handled by the target server.<br><br>Assumptions:<br><br>- Router has a DMZ configured and this has your WAN pfSense listed<br>- Subdomain A record created for target domain<br><br>Ok lets get it running, seen as we have an SSL cert to hand we can bind that to https on our target server<br><br>- Log in to pfSense and head to system &gt; package manager<br>- Hopeful you have already installed Open-VM-Tools for performance<br>&nbsp; &nbsp;-Search for HAProxy and click install &gt; confirm<br>
+  </p>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://pvtdrk.github.io.pvtdrk/media/posts/10/Screenshot-2021-02-05-at-14.11.56.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.11.56-xs.png 300w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.11.56-sm.png 480w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.11.56-md.png 768w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.11.56-lg.png 1024w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.11.56-xl.png 1360w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.11.56-2xl.png 1600w"  height="664" width="1160" alt="" />
+      
+    </figure>
+
+  <p>
+    - You should now have HAProxy under the services menu<br>    - Lets get a backend setup first
+  </p>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://pvtdrk.github.io.pvtdrk/media/posts/10/Screenshot-2021-02-05-at-14.14.18.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.14.18-xs.png 300w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.14.18-sm.png 480w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.14.18-md.png 768w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.14.18-lg.png 1024w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.14.18-xl.png 1360w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.14.18-2xl.png 1600w"  height="384" width="1155" alt="" />
+      
+    </figure>
+
+  <p>
+    - Add and give it a name<br>        - Add IP and port for this backend server<br>        - Leave everything else as default with the exception of Health Check set this to basic<br>        - Save
+  </p>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://pvtdrk.github.io.pvtdrk/media/posts/10/Screenshot-2021-02-05-at-14.15.39.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.15.39-xs.png 300w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.15.39-sm.png 480w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.15.39-md.png 768w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.15.39-lg.png 1024w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.15.39-xl.png 1360w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.15.39-2xl.png 1600w"  height="640" width="1187" alt="" />
+      
+    </figure>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://pvtdrk.github.io.pvtdrk/media/posts/10/Screenshot-2021-02-05-at-14.17.14.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.17.14-xs.png 300w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.17.14-sm.png 480w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.17.14-md.png 768w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.17.14-lg.png 1024w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.17.14-xl.png 1360w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.17.14-2xl.png 1600w"  height="313" width="1151" alt="" />
+      
+    </figure>
+
+  <p>
+    - Add a front end<br>        - Give it a name and external details set type to SSL / https
+  </p>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://pvtdrk.github.io.pvtdrk/media/posts/10/Screenshot-2021-02-05-at-14.23.08.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.23.08-xs.png 300w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.23.08-sm.png 480w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.23.08-md.png 768w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.23.08-lg.png 1024w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.23.08-xl.png 1360w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.23.08-2xl.png 1600w"  height="346" width="1157" alt="" />
+      
+    </figure>
+
+  <p>
+    - Set Expression Server Name Indication TLS extension ends with: <br>            - Value - target subdomain
+  </p>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://pvtdrk.github.io.pvtdrk/media/posts/10/Screenshot-2021-02-05-at-14.20.13.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.20.13-xs.png 300w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.20.13-sm.png 480w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.20.13-md.png 768w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.20.13-lg.png 1024w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.20.13-xl.png 1360w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.20.13-2xl.png 1600w"  height="428" width="1161" alt="" />
+      
+    </figure>
+
+  <p>
+    &nbsp;
+  </p>
+
+  <p>
+    - Action use backend (currently only one configured)<br>            - Here you could have multiple sub domains as backends and redirect them as required
+  </p>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://pvtdrk.github.io.pvtdrk/media/posts/10/Screenshot-2021-02-05-at-14.21.45.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.21.45-xs.png 300w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.21.45-sm.png 480w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.21.45-md.png 768w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.21.45-lg.png 1024w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.21.45-xl.png 1360w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.21.45-2xl.png 1600w"  height="213" width="1061" alt="" />
+      
+    </figure>
+
+  <p>
+    - Save<br>- Apply changes<br>
+  </p>
+
+  <p>
+    lastly go to HAProxy settings and enable the service, you will need to specify a maximum number of connections.
+  </p>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://pvtdrk.github.io.pvtdrk/media/posts/10/Screenshot-2021-02-05-at-14.33.04.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.33.04-xs.png 300w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.33.04-sm.png 480w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.33.04-md.png 768w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.33.04-lg.png 1024w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.33.04-xl.png 1360w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-14.33.04-2xl.png 1600w"  height="224" width="1162" alt="" />
+      
+    </figure>
+
+  <p>
+    - At this point you should be able to run an SSL checker externally and see your valid chain returned&nbsp;<br>- If external checks are failing check 443 is allowed on the pfSense firewall as it is blocked by default.
+  </p>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://pvtdrk.github.io.pvtdrk/media/posts/10/Screenshot-2021-02-05-at-16.14.14.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-16.14.14-xs.png 300w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-16.14.14-sm.png 480w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-16.14.14-md.png 768w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-16.14.14-lg.png 1024w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-16.14.14-xl.png 1360w ,https://pvtdrk.github.io.pvtdrk/media/posts/10/responsive/Screenshot-2021-02-05-at-16.14.14-2xl.png 1600w"  height="442" width="1159" alt="" />
+      
+    </figure>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Free-ish SSL Certs</title>
         <author>
             <name>pvtdrk</name>
         </author>
-        <link href="https://pvtdrk.github.io/pvtdrk/free-ish-ssl-certs.html"/>
-        <id>https://pvtdrk.github.io/pvtdrk/free-ish-ssl-certs.html</id>
+        <link href="https://pvtdrk.github.io.pvtdrk/free-ish-ssl-certs.html"/>
+        <id>https://pvtdrk.github.io.pvtdrk/free-ish-ssl-certs.html</id>
 
         <updated>2021-02-05T13:24:25+00:00</updated>
             <summary>
@@ -31,7 +135,7 @@
   </p>
 
     <figure class="post__image post__image--center">
-      <img loading="lazy" src="https://pvtdrk.github.io/pvtdrk/media/posts/8/Screenshot-2021-02-05-at-11.48.49.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.48.49-xs.png 300w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.48.49-sm.png 480w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.48.49-md.png 768w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.48.49-lg.png 1024w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.48.49-xl.png 1360w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.48.49-2xl.png 1600w"  height="451" width="515" alt="" />
+      <img loading="lazy" src="https://pvtdrk.github.io.pvtdrk/media/posts/8/Screenshot-2021-02-05-at-11.48.49.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.48.49-xs.png 300w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.48.49-sm.png 480w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.48.49-md.png 768w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.48.49-lg.png 1024w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.48.49-xl.png 1360w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.48.49-2xl.png 1600w"  height="451" width="515" alt="" />
       
     </figure>
 
@@ -40,7 +144,7 @@
   </p>
 
     <figure class="post__image post__image--center">
-      <img loading="lazy" src="https://pvtdrk.github.io/pvtdrk/media/posts/8/Screenshot-2021-02-05-at-11.50.03.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.03-xs.png 300w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.03-sm.png 480w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.03-md.png 768w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.03-lg.png 1024w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.03-xl.png 1360w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.03-2xl.png 1600w"  height="642" width="942" alt="" />
+      <img loading="lazy" src="https://pvtdrk.github.io.pvtdrk/media/posts/8/Screenshot-2021-02-05-at-11.50.03.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.03-xs.png 300w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.03-sm.png 480w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.03-md.png 768w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.03-lg.png 1024w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.03-xl.png 1360w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.03-2xl.png 1600w"  height="642" width="942" alt="" />
       
     </figure>
 
@@ -49,7 +153,7 @@
   </p>
 
     <figure class="post__image post__image--center">
-      <img loading="lazy" src="https://pvtdrk.github.io/pvtdrk/media/posts/8/Screenshot-2021-02-05-at-11.50.56.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.56-xs.png 300w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.56-sm.png 480w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.56-md.png 768w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.56-lg.png 1024w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.56-xl.png 1360w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.56-2xl.png 1600w"  height="645" width="942" alt="" />
+      <img loading="lazy" src="https://pvtdrk.github.io.pvtdrk/media/posts/8/Screenshot-2021-02-05-at-11.50.56.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.56-xs.png 300w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.56-sm.png 480w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.56-md.png 768w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.56-lg.png 1024w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.56-xl.png 1360w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-11.50.56-2xl.png 1600w"  height="645" width="942" alt="" />
       
     </figure>
 
@@ -58,7 +162,7 @@
   </p>
 
     <figure class="post__image post__image--center">
-      <img loading="lazy" src="https://pvtdrk.github.io/pvtdrk/media/posts/8/Screenshot-2021-02-05-at-12.16.37.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-12.16.37-xs.png 300w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-12.16.37-sm.png 480w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-12.16.37-md.png 768w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-12.16.37-lg.png 1024w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-12.16.37-xl.png 1360w ,https://pvtdrk.github.io/pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-12.16.37-2xl.png 1600w"  height="639" width="945" alt="" />
+      <img loading="lazy" src="https://pvtdrk.github.io.pvtdrk/media/posts/8/Screenshot-2021-02-05-at-12.16.37.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-12.16.37-xs.png 300w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-12.16.37-sm.png 480w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-12.16.37-md.png 768w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-12.16.37-lg.png 1024w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-12.16.37-xl.png 1360w ,https://pvtdrk.github.io.pvtdrk/media/posts/8/responsive/Screenshot-2021-02-05-at-12.16.37-2xl.png 1600w"  height="639" width="945" alt="" />
       
     </figure>
 
@@ -93,8 +197,8 @@
         <author>
             <name>pvtdrk</name>
         </author>
-        <link href="https://pvtdrk.github.io/pvtdrk/blog.html"/>
-        <id>https://pvtdrk.github.io/pvtdrk/blog.html</id>
+        <link href="https://pvtdrk.github.io.pvtdrk/blog.html"/>
+        <id>https://pvtdrk.github.io.pvtdrk/blog.html</id>
 
         <updated>2021-02-05T10:31:30+00:00</updated>
             <summary>
@@ -113,8 +217,8 @@
         <author>
             <name>pvtdrk</name>
         </author>
-        <link href="https://pvtdrk.github.io/pvtdrk/installing-pfsense-2.html"/>
-        <id>https://pvtdrk.github.io/pvtdrk/installing-pfsense-2.html</id>
+        <link href="https://pvtdrk.github.io.pvtdrk/installing-pfsense-2.html"/>
+        <id>https://pvtdrk.github.io.pvtdrk/installing-pfsense-2.html</id>
 
         <updated>2021-02-05T13:00:36+00:00</updated>
             <summary>
@@ -130,7 +234,7 @@
 <p>- Rufus application to put ISO onto USB </p>
 <p>There are some limitations on running ESXi from USB the key size can impact the partitioning of the target ESXi install but that is out of scope for this quick run down use keys over 16GB and it's a non issue for the homelab.</p>
 <p>Install / launch Rufus and select your target device, ISO and check the remaining setting:</p>
-<figure class="post__image"><img loading="lazy"  src="https://pvtdrk.github.io/pvtdrk/media/posts/5/Screenshot-2021-01-31-at-13.55.52.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io/pvtdrk/media/posts/5/responsive/Screenshot-2021-01-31-at-13.55.52-xs.png 300w ,https://pvtdrk.github.io/pvtdrk/media/posts/5/responsive/Screenshot-2021-01-31-at-13.55.52-sm.png 480w ,https://pvtdrk.github.io/pvtdrk/media/posts/5/responsive/Screenshot-2021-01-31-at-13.55.52-md.png 768w ,https://pvtdrk.github.io/pvtdrk/media/posts/5/responsive/Screenshot-2021-01-31-at-13.55.52-lg.png 1024w ,https://pvtdrk.github.io/pvtdrk/media/posts/5/responsive/Screenshot-2021-01-31-at-13.55.52-xl.png 1360w ,https://pvtdrk.github.io/pvtdrk/media/posts/5/responsive/Screenshot-2021-01-31-at-13.55.52-2xl.png 1600w"  alt="Rufus setting " width="471" height="718"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://pvtdrk.github.io.pvtdrk/media/posts/5/Screenshot-2021-01-31-at-13.55.52.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.github.io.pvtdrk/media/posts/5/responsive/Screenshot-2021-01-31-at-13.55.52-xs.png 300w ,https://pvtdrk.github.io.pvtdrk/media/posts/5/responsive/Screenshot-2021-01-31-at-13.55.52-sm.png 480w ,https://pvtdrk.github.io.pvtdrk/media/posts/5/responsive/Screenshot-2021-01-31-at-13.55.52-md.png 768w ,https://pvtdrk.github.io.pvtdrk/media/posts/5/responsive/Screenshot-2021-01-31-at-13.55.52-lg.png 1024w ,https://pvtdrk.github.io.pvtdrk/media/posts/5/responsive/Screenshot-2021-01-31-at-13.55.52-xl.png 1360w ,https://pvtdrk.github.io.pvtdrk/media/posts/5/responsive/Screenshot-2021-01-31-at-13.55.52-2xl.png 1600w"  alt="Rufus setting " width="471" height="718"></figure>
 <p>once this is complete you can head on over to your hardware of choice pop in this install media USB and target USB drive, if you have multiples of the same flash drive you can just start with the newly created boot media drive inserted and then take a note of it's ID &gt; insert the new target drive and rescan for devices.</p>
 <p>From this point its a lot of defaults settings, acknowledgements, keyboard layout and creation of the root account password once complete you can remove the install USB drive and reboot.</p>
 <p>you will now be booting off of the USB key, now log in to ESXi and configure your Datastores etc.</p>
@@ -139,45 +243,26 @@
         </content>
     </entry>
     <entry>
-        <title>Installing pfSense</title>
-        <author>
-            <name>pvtdrk</name>
-        </author>
-        <link href="https://pvtdrk.github.io/pvtdrk/installing-pfsense.html"/>
-        <id>https://pvtdrk.github.io/pvtdrk/installing-pfsense.html</id>
-
-        <updated>2021-02-05T10:20:50+00:00</updated>
-            <summary>
-                <![CDATA[
-                    notes on installing pfSense
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>notes on installing pfSense</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
         <title>Guides for things</title>
         <author>
             <name>pvtdrk</name>
         </author>
-        <link href="https://pvtdrk.github.io/pvtdrk/guides-for-things.html"/>
-        <id>https://pvtdrk.github.io/pvtdrk/guides-for-things.html</id>
+        <link href="https://pvtdrk.github.io.pvtdrk/guides-for-things.html"/>
+        <id>https://pvtdrk.github.io.pvtdrk/guides-for-things.html</id>
 
-        <updated>2021-02-05T13:24:52+00:00</updated>
+        <updated>2021-02-05T16:19:53+00:00</updated>
             <summary>
                 <![CDATA[
-                    list of guides: ESXi on USB Free-ish SSL Certs
+                    list of guides: ESXi on USB Free-ish SSL Certs Running your Homelab behind pfSense
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                 <p>list of guides:</p>
 <p> </p>
-<p><a href="https://pvtdrk.github.io/pvtdrk/installing-pfsense-2.html">ESXi on USB</a></p>
-<p><a href="https://pvtdrk.github.io/pvtdrk/free-ish-ssl-certs.html">Free-ish SSL Certs</a></p>
+<p><a href="https://pvtdrk.github.io.pvtdrk/installing-pfsense-2.html">ESXi on USB</a></p>
+<p><a href="https://pvtdrk.github.io.pvtdrk/free-ish-ssl-certs.html">Free-ish SSL Certs</a></p>
+<p><a href="https://pvtdrk.github.io.pvtdrk/running-your-homelab-behind-pfsense.html">Running your Homelab behind pfSense</a></p>
             ]]>
         </content>
     </entry>
