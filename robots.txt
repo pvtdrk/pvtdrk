@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://pvtdrk.github.io/pvtdrk/sitemap.xml
