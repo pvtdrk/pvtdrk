@@ -807,7 +807,6 @@ textarea {
 }
 .logo > img {
   max-height: calc(3.9666666667rem + 1vw);
-  width: auto;
 }
 
 .search {
