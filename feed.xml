@@ -3,7 +3,7 @@
     <title>Hey,</title>
     <link href="https://pvtdrk.com/feed.xml" rel="self" />
     <link href="https://pvtdrk.com" />
-    <updated>2021-03-31T12:22:43+01:00</updated>
+    <updated>2021-03-31T12:57:01+01:00</updated>
     <author>
         <name>pvtdrk</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://pvtdrk.com/access-on-prem-install.html"/>
         <id>https://pvtdrk.com/access-on-prem-install.html</id>
 
-        <updated>2021-03-31T12:19:11+01:00</updated>
+        <updated>2021-03-31T12:57:01+01:00</updated>
             <summary>
                 <![CDATA[
                      A quick and dirty install overview for VMware Access / Identity Manager, this will be a single node and is intended for the home lab environment to enable testing and understanding of the base technology, for production we would need greater care to be&hellip;
@@ -75,6 +75,10 @@
 
   <p>
     You now have an Access node up and running you can log into if you have followed the mess of steps above you should see the health status complains about reverse lookup not being found for me I added a host override on PFsense in the DNSResolver Service explicitly for this Access node and a HAproxy entry to finalize my install so it is externally available.
+  </p>
+
+  <p>
+    Additional note regarding Certs: if using CertifyTheWeb certificate tool outlined in another post the certificate might fail here as it does not chain to root, to resolve this open MMC and add certificate snap in, export your wild card cert with full chain option this will then allow a successful import of the certificate into Access
   </p>
 
   <p>
