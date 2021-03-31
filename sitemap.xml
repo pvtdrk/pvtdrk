@@ -18,7 +18,7 @@
 </url>
 <url>
 <loc>https://pvtdrk.com/guides-for-things.html</loc>
-<lastmod>2021-03-31T15:55:49+01:00</lastmod>
+<lastmod>2021-03-31T17:12:19+01:00</lastmod>
 </url>
 <url>
 <loc>https://pvtdrk.com/installing-pfsense-2.html</loc>
@@ -31,5 +31,9 @@
 <url>
 <loc>https://pvtdrk.com/running-your-homelab-behind-pfsense.html</loc>
 <lastmod>2021-02-05T16:17:33+00:00</lastmod>
+</url>
+<url>
+<loc>https://pvtdrk.com/vmware-acc-install-with-ad-integration.html</loc>
+<lastmod>2021-03-31T17:10:38+01:00</lastmod>
 </url>
 </urlset>
