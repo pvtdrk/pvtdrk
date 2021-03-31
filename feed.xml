@@ -3,7 +3,7 @@
     <title>Hey,</title>
     <link href="https://pvtdrk.com/feed.xml" rel="self" />
     <link href="https://pvtdrk.com" />
-    <updated>2021-03-31T17:12:19+01:00</updated>
+    <updated>2021-03-31T17:18:39+01:00</updated>
     <author>
         <name>pvtdrk</name>
     </author>
@@ -502,15 +502,15 @@
         <link href="https://pvtdrk.com/installing-pfsense-2.html"/>
         <id>https://pvtdrk.com/installing-pfsense-2.html</id>
 
-        <updated>2021-02-05T13:00:36+00:00</updated>
+        <updated>2021-03-31T17:18:39+01:00</updated>
             <summary>
                 <![CDATA[
-                    Pretty easy paint by number guide here you just need a few items; - ESXi ISO - USB key(s) or target USB drive and other source media to run ISO from - Rufus application to put ISO onto USB There are some limitations on running&hellip;
+                    Pretty easy guide here you just need a few items; - ESXi ISO - USB key(s) or target USB drive and other source media to run ISO from - Rufus application to put ISO onto USB There are some limitations on running ESXi from USB&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>Pretty easy paint by number guide here you just need a few items;</p>
+                <p>Pretty easy guide here you just need a few items;</p>
 <p>- ESXi ISO</p>
 <p>- USB key(s) or target USB drive and other source media to run ISO from</p>
 <p>- Rufus application to put ISO onto USB </p>
