@@ -83,15 +83,15 @@
             "id": "https://pvtdrk.com/guides-for-things.html",
             "url": "https://pvtdrk.com/guides-for-things.html",
             "title": "Guides for things",
-            "summary": "list of guides: ESXi on USB Free-ish SSL Certs Running your Homelab behind pfSense Access on-Prem install",
-            "content_html": "<p>list of guides:</p>\n<p> </p>\n<p><a href=\"https://pvtdrk.com/installing-pfsense-2.html\">ESXi on USB</a></p>\n<p><a href=\"https://pvtdrk.com/free-ish-ssl-certs.html\">Free-ish SSL Certs</a></p>\n<p><a href=\"https://pvtdrk.com/running-your-homelab-behind-pfsense.html\">Running your Homelab behind pfSense</a></p>\n<p><a href=\"https://pvtdrk.com/access-on-prem-install.html\">Access on-Prem install</a></p>",
+            "summary": "List of guides: ESXi on USB Free-ish SSL Certs Running your Homelab behind pfSense Access on-Prem install",
+            "content_html": "<p><strong>List of guides:</strong></p>\n<p><a href=\"https://pvtdrk.com/installing-pfsense-2.html\">ESXi on USB</a></p>\n<p><a href=\"https://pvtdrk.com/free-ish-ssl-certs.html\">Free-ish SSL Certs</a></p>\n<p><a href=\"https://pvtdrk.com/running-your-homelab-behind-pfsense.html\">Running your Homelab behind pfSense</a></p>\n<p><a href=\"https://pvtdrk.com/access-on-prem-install.html\">Access on-Prem install</a></p>",
             "author": {
                 "name": "pvtdrk"
             },
             "tags": [
             ],
             "date_published": "2021-02-05T09:48:54+00:00",
-            "date_modified": "2021-03-31T12:22:43+01:00"
+            "date_modified": "2021-03-31T15:55:49+01:00"
         }
     ]
 }

@@ -3,7 +3,7 @@
     <title>Hey,</title>
     <link href="https://pvtdrk.com/feed.xml" rel="self" />
     <link href="https://pvtdrk.com" />
-    <updated>2021-03-31T12:57:01+01:00</updated>
+    <updated>2021-03-31T15:55:49+01:00</updated>
     <author>
         <name>pvtdrk</name>
     </author>
@@ -328,16 +328,15 @@
         <link href="https://pvtdrk.com/guides-for-things.html"/>
         <id>https://pvtdrk.com/guides-for-things.html</id>
 
-        <updated>2021-03-31T12:22:43+01:00</updated>
+        <updated>2021-03-31T15:55:49+01:00</updated>
             <summary>
                 <![CDATA[
-                    list of guides: ESXi on USB Free-ish SSL Certs Running your Homelab behind pfSense Access on-Prem install
+                    List of guides: ESXi on USB Free-ish SSL Certs Running your Homelab behind pfSense Access on-Prem install
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <p>list of guides:</p>
-<p> </p>
+                <p><strong>List of guides:</strong></p>
 <p><a href="https://pvtdrk.com/installing-pfsense-2.html">ESXi on USB</a></p>
 <p><a href="https://pvtdrk.com/free-ish-ssl-certs.html">Free-ish SSL Certs</a></p>
 <p><a href="https://pvtdrk.com/running-your-homelab-behind-pfsense.html">Running your Homelab behind pfSense</a></p>
