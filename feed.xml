@@ -3,7 +3,7 @@
     <title>Hey,</title>
     <link href="https://pvtdrk.com/feed.xml" rel="self" />
     <link href="https://pvtdrk.com" />
-    <updated>2021-04-01T10:07:22+01:00</updated>
+    <updated>2021-04-01T10:19:09+01:00</updated>
     <author>
         <name>pvtdrk</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://pvtdrk.com/configure-uem-in-access.html"/>
         <id>https://pvtdrk.com/configure-uem-in-access.html</id>
 
-        <updated>2021-04-01T10:06:39+01:00</updated>
+        <updated>2021-04-01T10:19:09+01:00</updated>
             <summary>
                 <![CDATA[
                      More paint by numbers for this overview of a very simple integration as always refer to VMware documentation for the latest guides and recommendations but this should help as a visual guide. In brief we need to create some API keys an Admin with&hellip;
@@ -56,11 +56,11 @@
   </div>
 
   <p>
-    Head over to the UEM console to create API keys, the Admin and make a note of the Group ID
+    **Head over to the UEM console to create API keys, the Admin and make a note of the Group ID
   </p>
 
   <p>
-    API Keys, you need an Admin and an Enrollment User key, Once generated copy them into the relevant field in the Access config page
+    **API Keys, you need an Admin and an Enrollment User key, Once generated copy them into the relevant field in the Access config page
   </p>
 
     <figure class="post__image post__image--center">
@@ -132,7 +132,60 @@
     </figure>
 
   <p>
-    And this bit is complete.<br>
+    And this bit is complete.
+  </p>
+
+  <p>
+    ** Note on API keys you can also tie Access and UEM together via settings on the the UEM side which has an auto API generation tool.
+  </p>
+
+  <div  class="gallery-wrapper gallery-wrapper--center">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/13/gallery/2021-04-01_10h08_38.png" data-size="1412x998">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/13/gallery/2021-04-01_10h08_38-thumbnail.png" height="509" width="720" alt="" />
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/13/gallery/2021-04-01_10h09_00.png" data-size="1412x998">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/13/gallery/2021-04-01_10h09_00-thumbnail.png" height="509" width="720" alt="" />
+      </a>
+      
+    </figure>
+    </div>
+  </div>
+
+  <p>
+    Add your Access info
+  </p>
+
+  <div  class="gallery-wrapper gallery-wrapper--center">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/13/gallery/2021-04-01_10h09_09.png" data-size="1412x998">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/13/gallery/2021-04-01_10h09_09-thumbnail.png" height="509" width="720" alt="" />
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/13/gallery/2021-04-01_10h09_46.png" data-size="1412x998">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/13/gallery/2021-04-01_10h09_46-thumbnail.png" height="509" width="720" alt="" />
+      </a>
+      
+    </figure>
+    </div>
+  </div>
+
+  <p>
+    Then you will have the ability to Auto generate API Keys
+  </p>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://pvtdrk.com/media/posts/13/2021-04-01_10h17_13.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.com/media/posts/13/responsive/2021-04-01_10h17_13-xs.png 300w ,https://pvtdrk.com/media/posts/13/responsive/2021-04-01_10h17_13-sm.png 480w ,https://pvtdrk.com/media/posts/13/responsive/2021-04-01_10h17_13-md.png 768w ,https://pvtdrk.com/media/posts/13/responsive/2021-04-01_10h17_13-lg.png 1024w ,https://pvtdrk.com/media/posts/13/responsive/2021-04-01_10h17_13-xl.png 1360w ,https://pvtdrk.com/media/posts/13/responsive/2021-04-01_10h17_13-2xl.png 1600w"  height="998" width="1412" alt="" />
+      
+    </figure>
+
+  <p>
+    Double Done, you will see under REST API keys the auto generated Admin and Enrollment User.
   </p>
             ]]>
         </content>
