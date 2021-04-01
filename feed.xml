@@ -3,12 +3,248 @@
     <title>Hey,</title>
     <link href="https://pvtdrk.com/feed.xml" rel="self" />
     <link href="https://pvtdrk.com" />
-    <updated>2021-04-01T10:19:09+01:00</updated>
+    <updated>2021-04-01T12:15:15+01:00</updated>
     <author>
         <name>pvtdrk</name>
     </author>
     <id>https://pvtdrk.com</id>
 
+    <entry>
+        <title>Adding an Access Connector and Directory</title>
+        <author>
+            <name>pvtdrk</name>
+        </author>
+        <link href="https://pvtdrk.com/adding-an-access-connector-and-directory.html"/>
+        <id>https://pvtdrk.com/adding-an-access-connector-and-directory.html</id>
+
+        <updated>2021-04-01T12:14:35+01:00</updated>
+            <summary>
+                <![CDATA[
+                     As always check the VMware documentation for Pre-reqs and best practice for sizing etc as I will be fast and loose with both in this example as this is for a home lab and is to be used as a visual aid not a&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                
+  <p>
+    As always check the VMware documentation for Pre-reqs and best practice for sizing etc as I will be fast and loose with both in this example as this is for a home lab and is to be used as a visual aid not a source of truth, with that out the way, lets jump in.
+  </p>
+
+  <p>
+    Head over to the resource portal and grab the Access connector download.
+  </p>
+
+  <p>
+    Log into Access and head over to the connectors page under setup in the Identity and Access Management tab, Based on your use case you have a couple options, if you plan to use virtual apps via Horizon or Citrix you will need to use the legacy connector type so insure a supported connector is download
+  </p>
+
+  <p>
+    Lets set up a non legacy connector. Add connector, save the config file and set a password:
+  </p>
+
+  <div  class="gallery-wrapper gallery-wrapper--center">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h48_19.png" data-size="1151x452">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h48_19-thumbnail.png" height="283" width="720" alt="" />
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h49_09.png" data-size="1154x455">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h49_09-thumbnail.png" height="284" width="720" alt="" />
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h49_48.png" data-size="1153x453">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h49_48-thumbnail.png" height="283" width="720" alt="" />
+      </a>
+      
+    </figure>
+    </div>
+  </div>
+
+  <p>
+    Run the installer, Note the machine my connector is installed on is not domain joined so Kerberos Auth will not be supported so needs to have the feature deselected, you will need to add missing required components, browse the config file and provide the password:
+  </p>
+
+  <div  class="gallery-wrapper gallery-wrapper--center">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h38_46-2.png" data-size="499x379">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h38_46-2-thumbnail.png" height="379" width="499" alt="" />
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h38_24.png" data-size="790x533">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h38_24-thumbnail.png" height="486" width="720" alt="" />
+      </a>
+      
+    </figure>
+    </div>
+  </div>
+
+  <div  class="gallery-wrapper gallery-wrapper--center">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h39_18.png" data-size="489x374">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h39_18-thumbnail.png" height="374" width="489" alt="" />
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h40_08.png" data-size="500x379">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h40_08-thumbnail.png" height="379" width="500" alt="" />
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h39_40.png" data-size="498x379">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h39_40-thumbnail.png" height="379" width="498" alt="" />
+      </a>
+      
+    </figure>
+    </div>
+  </div>
+
+  <p>
+    Running Default options here, select custom for Proxy and Syslog server as well as uploading cert.
+  </p>
+
+  <div  class="gallery-wrapper gallery-wrapper--center">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h40_24.png" data-size="498x381">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h40_24-thumbnail.png" height="381" width="498" alt="" />
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h52_12.png" data-size="498x379">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h52_12-thumbnail.png" height="379" width="498" alt="" />
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h52_30.png" data-size="498x378">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h52_30-thumbnail.png" height="378" width="498" alt="" />
+      </a>
+      
+    </figure>
+    </div>
+  </div>
+
+  <p>
+    Ready to install, and installer finished:
+  </p>
+
+  <div  class="gallery-wrapper gallery-wrapper--center">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h53_02.png" data-size="499x378">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h53_02-thumbnail.png" height="378" width="499" alt="" />
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h57_51.png" data-size="497x379">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_10h57_51-thumbnail.png" height="379" width="497" alt="" />
+      </a>
+      
+    </figure>
+    </div>
+  </div>
+
+  <p>
+    Head back over to Access and refresh the connector page and it should come back green.
+  </p>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://pvtdrk.com/media/posts/14/2021-04-01_11h02_20.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.com/media/posts/14/responsive/2021-04-01_11h02_20-xs.png 300w ,https://pvtdrk.com/media/posts/14/responsive/2021-04-01_11h02_20-sm.png 480w ,https://pvtdrk.com/media/posts/14/responsive/2021-04-01_11h02_20-md.png 768w ,https://pvtdrk.com/media/posts/14/responsive/2021-04-01_11h02_20-lg.png 1024w ,https://pvtdrk.com/media/posts/14/responsive/2021-04-01_11h02_20-xl.png 1360w ,https://pvtdrk.com/media/posts/14/responsive/2021-04-01_11h02_20-2xl.png 1600w"  height="283" width="1391" alt="" />
+      
+    </figure>
+
+  <p>
+    Done, time to add a directory to validate.
+  </p>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://pvtdrk.com/media/posts/14/2021-04-01_11h04_55.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.com/media/posts/14/responsive/2021-04-01_11h04_55-xs.png 300w ,https://pvtdrk.com/media/posts/14/responsive/2021-04-01_11h04_55-sm.png 480w ,https://pvtdrk.com/media/posts/14/responsive/2021-04-01_11h04_55-md.png 768w ,https://pvtdrk.com/media/posts/14/responsive/2021-04-01_11h04_55-lg.png 1024w ,https://pvtdrk.com/media/posts/14/responsive/2021-04-01_11h04_55-xl.png 1360w ,https://pvtdrk.com/media/posts/14/responsive/2021-04-01_11h04_55-2xl.png 1600w"  height="998" width="1412" alt="" />
+      
+    </figure>
+
+  <p>
+    Pretty much go with most of the defaults here as it's a home lab with nothing complex going on, please note in this example I have no valid test users so the sync will fail and show missing attributes but this will confirm the connector is functioning&nbsp;
+  </p>
+
+  <div  class="gallery-wrapper gallery-wrapper--center">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h04_04.png" data-size="1504x958">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h04_04-thumbnail.png" height="459" width="720" alt="" />
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h04_26.png" data-size="1504x958">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h04_26-thumbnail.png" height="459" width="720" alt="" />
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h04_31.png" data-size="1504x958">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h04_31-thumbnail.png" height="459" width="720" alt="" />
+      </a>
+      
+    </figure>
+    </div>
+  </div>
+
+  <div  class="gallery-wrapper gallery-wrapper--center">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h04_45.png" data-size="1504x958">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h04_45-thumbnail.png" height="459" width="720" alt="" />
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h04_52.png" data-size="1504x958">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h04_52-thumbnail.png" height="459" width="720" alt="" />
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h05_14.png" data-size="1504x958">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h05_14-thumbnail.png" height="459" width="720" alt="" />
+      </a>
+      
+    </figure>
+    </div>
+  </div>
+
+  <div  class="gallery-wrapper gallery-wrapper--center">
+    <div class="gallery" data-columns="3">
+      <figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h05_23.png" data-size="1504x958">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h05_23-thumbnail.png" height="459" width="720" alt="" />
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h05_28.png" data-size="1504x958">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h05_28-thumbnail.png" height="459" width="720" alt="" />
+      </a>
+      
+    </figure><figure class="gallery__item">
+      <a href="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h05_39.png" data-size="1504x958">
+        <img loading="lazy" src="https://pvtdrk.com/media/posts/14/gallery/2021-04-01_12h05_39-thumbnail.png" height="459" width="720" alt="" />
+      </a>
+      
+    </figure>
+    </div>
+  </div>
+
+  <p>
+    As noted we see a errors in the sync log but related to missing attributes.
+  </p>
+
+    <figure class="post__image post__image--center">
+      <img loading="lazy" src="https://pvtdrk.com/media/posts/14/2021-04-01_12h06_02.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://pvtdrk.com/media/posts/14/responsive/2021-04-01_12h06_02-xs.png 300w ,https://pvtdrk.com/media/posts/14/responsive/2021-04-01_12h06_02-sm.png 480w ,https://pvtdrk.com/media/posts/14/responsive/2021-04-01_12h06_02-md.png 768w ,https://pvtdrk.com/media/posts/14/responsive/2021-04-01_12h06_02-lg.png 1024w ,https://pvtdrk.com/media/posts/14/responsive/2021-04-01_12h06_02-xl.png 1360w ,https://pvtdrk.com/media/posts/14/responsive/2021-04-01_12h06_02-2xl.png 1600w"  height="151" width="835" alt="" />
+      
+    </figure>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Configure UEM in Access</title>
         <author>
@@ -713,10 +949,10 @@
         <link href="https://pvtdrk.com/guides-for-things.html"/>
         <id>https://pvtdrk.com/guides-for-things.html</id>
 
-        <updated>2021-04-01T10:07:22+01:00</updated>
+        <updated>2021-04-01T12:15:15+01:00</updated>
             <summary>
                 <![CDATA[
-                    List of guides: ESXi on USB Free-ish SSL Certs Running your Homelab behind pfSense Access on-Prem install VMware ACC install with AD integration Configure UEM in Access
+                    List of guides: ESXi on USB Free-ish SSL Certs Running your Homelab behind pfSense Access on-Prem install VMware ACC install with AD integration Configure UEM in Access Adding an Access Connector and Directory
                 ]]>
             </summary>
         <content type="html">
@@ -728,6 +964,7 @@
 <p><a href="https://pvtdrk.com/access-on-prem-install.html">Access on-Prem install</a></p>
 <p><a href="https://pvtdrk.com/vmware-acc-install-with-ad-integration.html">VMware ACC install with AD integration</a></p>
 <p><a href="https://pvtdrk.com/configure-uem-in-access.html">Configure UEM in Access</a></p>
+<p><a href="https://pvtdrk.com/adding-an-access-connector-and-directory.html">Adding an Access Connector and Directory</a></p>
             ]]>
         </content>
     </entry>
